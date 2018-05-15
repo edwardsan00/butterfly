@@ -1,0 +1,9 @@
+//Width
+$width: 100;
+//Interval 
+$interval: 5;
+@for $i from 1 through ($width / $interval){
+  .width-#{$i * $interval}{
+    width: unquote($i * $interval + "%");
+  }
+}

@@ -1,0 +1,36 @@
+// colors
+$primary:   		$blue !default;
+$success:   		$green !default;
+$info:      		$cyan !default;
+$warning:   		$yellow !default;
+$danger:    		$red !default;
+$prevent:   		$orange !default;
+$light:     		$gray-100 !default;
+$secondary: 		$gray-200 !default;
+$disabled: 			$gray-300;
+$gray-mediun:		$gray-400 !default;
+$black:					$black !default;
+$gray-solid:		$gray !default;
+//map color
+$map-palette:(
+	primary:			$blue,
+	success: 			$green,
+	info:					$info,
+	warning: 			$yellow,
+	danger: 			$red,
+	prevent: 			$prevent,
+	light: 				$gray-100,
+	secondary: 		$gray-200,
+	disabled: 		$disabled,
+	dark: 				$gray-400,
+	black:				$black,
+	gray-solid:		$gray
+);
+
+$map-palette-button:(
+	primary:			$blue,
+	success: 			$green,
+	info:					$info,
+	warning: 			$yellow,
+	danger: 			$red,
+);

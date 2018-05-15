@@ -1,0 +1,40 @@
+%base-button {
+  display         : inline-block;
+  padding         : .6em 1.4em;
+  cursor          : pointer;
+  border          : none;
+  text-decoration : none;
+  letter-spacing: 0.5px;
+  transition: all .15s ease-in-out;
+}
+
+@mixin createButton($bg-color: $gray-300,$front-color: $black,$style: radius, $modify: true) {
+  @if $modify{
+    @extend    %base-button;
+  }
+  background : $bg-color;
+  color      : $front-color;
+  &:hover {
+    background      : darken($bg-color, 5);
+    text-decoration : none;
+    transition: all .15s ease-in-out;
+  }
+  // &:active {
+  //   transform : scale(.97);
+  // }
+  @if $style == radius {
+    border-radius : .25em;
+  } @else if $style == round {
+    border-radius : 1.25em;
+  }
+  @content;
+}
+
+.btn{
+  @include createButton();
+}
+@each $name, $value in $map-palette-button{
+  .btn--#{$name}{
+    @include createButton($value, $white, radius, false);
+  }
+}

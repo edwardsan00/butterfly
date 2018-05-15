@@ -1,0 +1,11 @@
+@function img($url){
+  @return url("./../img/ + #{$url}");
+}
+
+@function em($child, $font-size-base: $font-size-base){
+  @return $child / $font-size-base * 1em;
+}
+
+@function rem($child, $font-size-base: $font-size-base){
+  @return $child / $font-size-base * 1rem;
+}

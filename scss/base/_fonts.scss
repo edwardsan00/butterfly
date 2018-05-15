@@ -1,0 +1,21 @@
+$font-size-base: 16px;
+// fonts size header
+$h1:                rem($font-size-base * 2.5) !default;
+$h2:                rem($font-size-base * 2) !default;
+$h3:                rem($font-size-base * 1.75) !default;
+$h4:                rem($font-size-base * 1.5) !default;
+$h5:                rem($font-size-base * 1.25) !default;
+$h6:                rem($font-size-base) !default;
+// font family
+$font-family: 		        "proxima-nova", sans-serif;
+$font-family-secondary:   "proxima-nova", sans-serif;
+$font-family-extra:       "proxima-nova", sans-serif;
+
+$headings-map: (
+  h1: $h1,
+  h2: $h2,
+  h3: $h3,
+  h4: $h4,
+  h5: $h5,
+  h6: $h6
+)

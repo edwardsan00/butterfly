@@ -1,0 +1,15 @@
+$gridLenghtDefault: 12;
+
+@mixin create-grid($gridLenght: $gridLenghtDefault){
+  display: grid;
+  grid-template-columns: repeat($gridLenght, [col-start] 1fr [col-end]);
+}
+
+@mixin create-class-grid($media){
+  @for $i from 1 through $gridLenght{
+    .#{$media}-#{$i}{
+     // grid-column: 
+    }
+  }
+  
+}

@@ -1,0 +1,116 @@
+@mixin flex-order {
+  @for $i from 1 through $max-grid {
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+}
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin main-justify {
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin main-distribute {
+  @include flex;
+  justify-content: space-around;
+}
+
+@mixin main-center {
+  @include flex;
+  justify-content: center;
+}
+
+@mixin main-start {
+  @include flex;
+  justify-content: flex-start;
+}
+
+@mixin main-end {
+  @include flex;
+  justify-content: flex-end;
+}
+
+@mixin cross-start {
+  @include flex;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+@mixin cross-center {
+  @include flex;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin cross-end {
+  @include flex;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+@mixin flex-reverse {
+  @include flex;
+  flex-direction: row-reverse;
+}
+
+@mixin flex-column {
+  @include flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-reverse {
+  @include flex;
+  flex-direction: column-reverse;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*@mixin flexCssHelpers {
+  .main-justify {
+    @include mainJustify
+  }
+  .main-distribute {
+    @include mainDistribute
+  }
+  .main-center {
+    @include mainCenter
+  }
+  .main-start {
+    @include mainStart
+  }
+  .main-end {
+    @include mainEnd
+  }
+  .cross-start {
+    @include crossStart
+  }
+  .cross-center {
+    @include crossCenter
+  }
+  .cross-end {
+    @include crossEnd
+  }
+  .flex-reverse {
+    @include flexReverse
+  }
+  .flex-column {
+    @include flexColumn
+  }
+  .flex-column-reverse {
+    @include flexColumnReverse
+  }
+  .abcenter {
+    @include flexCenter
+  }
+}*/
