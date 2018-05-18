@@ -1,0 +1,99 @@
+$label-color: $black;
+$label-font-size: 1rem;
+$label-font-family: $font-family;
+
+$input-color: $gray;
+$input-color-border: $gray;
+$input-font-size: 1rem;
+$input-font-family: $font-family;
+
+$placeholder-color: $gray;
+$placeholder-font-size: 1rem;
+$placeholder-font-family: $font-family;
+
+$form-round: 5px;
+
+.form{
+  input, textarea{
+    height: 30px;
+    box-sizing: border-box;
+    color: $input-color;
+    font-size: $input-font-size;
+    font-family: $input-font-family;
+    border-style: solid;
+    border-color: $input-color-border;
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    padding: .375rem .75rem;
+    font-weight: 300;
+    transition: border-color .15s ease-in-out;
+    &:hover{
+      border-color: $black;
+      transition: border-color .15s ease-in-out;
+    }
+    &:focus{
+      outline: none;
+    }
+    &::placeholder {
+      color: $placeholder-color;
+      font-size: $placeholder-font-size;
+      font-family: $placeholder-font-family;
+    }
+    &:disabled{
+      opacity: .5;
+      &:hover{
+        border-color: $input-color-border;
+      }
+    }
+}
+textarea{
+  min-height: 100px;
+}
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+
+    &__col{
+      padding-right: 5px;
+      padding-left: 5px;
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+  }
+  &__group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    label{
+      margin-bottom: 5px;
+      color: $label-color;
+      font-size: $label-font-size;
+      font-family: $label-font-family;
+    }
+    // state
+    @each $name, $value in $map-palette-form{
+      .is-#{$name}{
+        label{
+          color: $value;
+        }
+        input{
+          border-color: $value;
+        }
+      }
+    }
+  }
+
+  // modifier
+  &.form--round{
+    input, textarea{
+      border-radius: $form-round;
+    }
+  }
+}

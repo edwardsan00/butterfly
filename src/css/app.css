@@ -65,6 +65,7 @@
 .material-icons.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3); }
 
+<<<<<<< HEAD
 .h1 {
   font-size: 2.5rem; }
 
@@ -307,3 +308,101 @@
     grid-column: 1/span 12; }
   .row .offset-12 {
     grid-column: span 12/span 12; }
+=======
+.form input, .form textarea {
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #8e9bab;
+  font-size: 1rem;
+  font-family: "proxima-nova", sans-serif;
+  border-style: solid;
+  border-color: #8e9bab;
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  padding: .375rem .75rem;
+  font-weight: 300;
+  -webkit-transition: border-color .15s ease-in-out;
+  transition: border-color .15s ease-in-out; }
+  .form input:hover, .form textarea:hover {
+    border-color: #172b4d;
+    -webkit-transition: border-color .15s ease-in-out;
+    transition: border-color .15s ease-in-out; }
+  .form input:focus, .form textarea:focus {
+    outline: none; }
+  .form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+    color: #8e9bab;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+    color: #8e9bab;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form input::-ms-input-placeholder, .form textarea::-ms-input-placeholder {
+    color: #8e9bab;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form input::placeholder, .form textarea::placeholder {
+    color: #8e9bab;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form input:disabled, .form textarea:disabled {
+    opacity: .5; }
+    .form input:disabled:hover, .form textarea:disabled:hover {
+      border-color: #8e9bab; }
+
+.form textarea {
+  min-height: 100px; }
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px; }
+  .form__row__col {
+    padding-right: 5px;
+    padding-left: 5px;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 100%; }
+
+.form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px; }
+  .form__group label {
+    margin-bottom: 5px;
+    color: #172b4d;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form__group .is-success label {
+    color: #38c550; }
+  .form__group .is-success input {
+    border-color: #38c550; }
+  .form__group .is-warning label {
+    color: #ffeb3b; }
+  .form__group .is-warning input {
+    border-color: #ffeb3b; }
+  .form__group .is-danger label {
+    color: #ee5f5f; }
+  .form__group .is-danger input {
+    border-color: #ee5f5f; }
+
+.form.form--round input, .form.form--round textarea {
+  border-radius: 5px; }
+>>>>>>> 8b0de3d3642744fdd668be636f5e98e9f82fd96a
