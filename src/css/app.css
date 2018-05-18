@@ -65,129 +65,99 @@
 .material-icons.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3); }
 
-.h1 {
-  font-size: 2.5rem; }
+.form input, .form textarea {
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #8e9bab;
+  font-size: 1rem;
+  font-family: "proxima-nova", sans-serif;
+  border-style: solid;
+  border-color: #8e9bab;
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  padding: .375rem .75rem;
+  font-weight: 300;
+  -webkit-transition: border-color .15s ease-in-out;
+  transition: border-color .15s ease-in-out; }
+  .form input:hover, .form textarea:hover {
+    border-color: #172b4d;
+    -webkit-transition: border-color .15s ease-in-out;
+    transition: border-color .15s ease-in-out; }
+  .form input:focus, .form textarea:focus {
+    outline: none; }
+  .form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+    color: #8e9bab;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+    color: #8e9bab;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form input::-ms-input-placeholder, .form textarea::-ms-input-placeholder {
+    color: #8e9bab;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form input::placeholder, .form textarea::placeholder {
+    color: #8e9bab;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form input:disabled, .form textarea:disabled {
+    opacity: .5; }
+    .form input:disabled:hover, .form textarea:disabled:hover {
+      border-color: #8e9bab; }
 
-.h2 {
-  font-size: 2rem; }
+.form textarea {
+  min-height: 100px; }
 
-.h3 {
-  font-size: 1.75rem; }
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px; }
+  .form__row__col {
+    padding-right: 5px;
+    padding-left: 5px;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 100%; }
 
-.h4 {
-  font-size: 1.5rem; }
+.form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px; }
+  .form__group label {
+    margin-bottom: 5px;
+    color: #172b4d;
+    font-size: 1rem;
+    font-family: "proxima-nova", sans-serif; }
+  .form__group .is-success label {
+    color: #38c550; }
+  .form__group .is-success input {
+    border-color: #38c550; }
+  .form__group .is-warning label {
+    color: #ffeb3b; }
+  .form__group .is-warning input {
+    border-color: #ffeb3b; }
+  .form__group .is-danger label {
+    color: #ee5f5f; }
+  .form__group .is-danger input {
+    border-color: #ee5f5f; }
 
-.h5 {
-  font-size: 1.25rem; }
-
-.h6 {
-  font-size: 1rem; }
-
-.btn {
-  display: inline-block;
-  padding: .6em 1.4em;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out; }
-
-.btn {
-  background: #b8bec9;
-  color: #172b4d;
-  border-radius: .25em; }
-  .btn:hover {
-    background: #aab1be;
-    text-decoration: none;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out; }
-
-.btn--primary {
-  background: #0477ea;
-  color: #ffffff;
-  border-radius: .25em; }
-  .btn--primary:hover {
-    background: #046ad1;
-    text-decoration: none;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out; }
-
-.btn--success {
-  background: #38c550;
-  color: #ffffff;
-  border-radius: .25em; }
-  .btn--success:hover {
-    background: #32b148;
-    text-decoration: none;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out; }
-
-.btn--info {
-  background: #0065DC;
-  color: #ffffff;
-  border-radius: .25em; }
-  .btn--info:hover {
-    background: #0059c3;
-    text-decoration: none;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out; }
-
-.btn--warning {
-  background: #ffeb3b;
-  color: #ffffff;
-  border-radius: .25em; }
-  .btn--warning:hover {
-    background: #ffe822;
-    text-decoration: none;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out; }
-
-.btn--danger {
-  background: #ee5f5f;
-  color: #ffffff;
-  border-radius: .25em; }
-  .btn--danger:hover {
-    background: #ec4848;
-    text-decoration: none;
-    -webkit-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out; }
-
-/*@mixin flexCssHelpers {
-  .main-justify {
-    @include mainJustify
-  }
-  .main-distribute {
-    @include mainDistribute
-  }
-  .main-center {
-    @include mainCenter
-  }
-  .main-start {
-    @include mainStart
-  }
-  .main-end {
-    @include mainEnd
-  }
-  .cross-start {
-    @include crossStart
-  }
-  .cross-center {
-    @include crossCenter
-  }
-  .cross-end {
-    @include crossEnd
-  }
-  .flex-reverse {
-    @include flexReverse
-  }
-  .flex-column {
-    @include flexColumn
-  }
-  .flex-column-reverse {
-    @include flexColumnReverse
-  }
-  .abcenter {
-    @include flexCenter
-  }
-}*/
+.form.form--round input, .form.form--round textarea {
+  border-radius: 5px; }
