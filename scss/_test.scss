@@ -1,0 +1,8 @@
+.container{
+  width: 100%;
+  max-width: 1200px;
+}
+.row{
+  @include create-grid();
+  @include create-class-grid();
+}

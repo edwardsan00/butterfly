@@ -1,15 +1,30 @@
-$gridLenghtDefault: 12;
+$gridLenghtDefault: 12 !global;
 
-@mixin create-grid($gridLenght: $gridLenghtDefault){
+@mixin create-grid($gridLenght: $gridLenghtDefault, $gridGap: 0){
+  $gridLenght: $gridLenght !global;
+  $divisor: 100% / $gridLenght;
   display: grid;
-  grid-template-columns: repeat($gridLenght, [col-start] 1fr [col-end]);
+  grid-template-columns: repeat(auto-fit, minmax($divisor, 1fr));
+  grid-gap: $gridGap;
+  @content;
+
 }
 
 @mixin create-class-grid($media){
   @for $i from 1 through $gridLenght{
     .#{$media}-#{$i}{
-     // grid-column: 
+      @if($i == 1 ){
+        grid-column:  span 1;
+      } @else{
+        grid-column: 1 / span $i;
+      }
+    }
+    .offset-#{$i}{
+      grid-column: span $i / span $gridLenght;
     }
   }
-  
 }
+
+/*@each $media, $size in $breakpoints{
+
+}*/
