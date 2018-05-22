@@ -37,6 +37,7 @@ $form-round: 5px;
     }
     &:focus{
       outline: none;
+      border-color: $black;
     }
     &::placeholder {
       color: $placeholder-color;
@@ -79,12 +80,57 @@ textarea{
     }
     // state
     @each $name, $value in $map-palette-form{
-      .is-#{$name}{
+      &.is-#{$name}{
         label{
-          color: $value;
+          color: $value !important;
         }
         input{
-          border-color: $value;
+          border-color: $value !important;
+        }
+      }
+    }
+    &__checkbox {
+      label {
+        position: relative;
+        cursor: pointer;
+        display: inline-flex;
+        input[type="checkbox"] {
+          position: relative;
+          top: -.3rem;
+          margin-right: 1rem;
+          cursor: pointer;
+          width: 1rem;
+          height: 1rem;
+          &:before {
+            transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+            transform: rotate(-45deg) scale(0, 0);
+            content: "";
+            position: absolute;
+            left: 0.1875rem;
+            top: .25rem;
+            z-index: 1;
+            width: 0.75rem;
+            height: 0.375rem;
+            border: 2px solid #16a085;
+            border-top-style: none;
+            border-right-style: none;
+          }
+          &:checked {
+            &:before {
+              transform: rotate(-45deg) scale(1, 1);
+            }
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1rem;
+            height: 1rem;
+            background: #fff;
+            border: 2px solid #f2f2f2;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -94,6 +140,18 @@ textarea{
   &.form--round{
     input, textarea{
       border-radius: $form-round;
+    }
+  }
+  &.form--material{
+    input, textarea{
+      border: none;
+      border-bottom: solid 1px $input-color-border;
+      &:hover{
+        border-bottom: solid 1px $black;
+      }
+      &:focus{
+        border-bottom: solid 1px $black;
+      }
     }
   }
 }
