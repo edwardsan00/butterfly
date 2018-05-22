@@ -1,0 +1,24 @@
+$gridLenghtDefault: 12 !global;
+
+//Definiendo el mixin para crear grillas internas a el elemento que la importe
+@mixin create-grid($gridLenght: $gridLenghtDefault, $gridGap: 0){
+  $gridLenghtRecivido: $gridLenght !global;
+  $divisor: 100% / $gridLenght;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($divisor, 1fr));
+  grid-gap: $gridGap;
+  @content;
+}
+
+//Definiendo el mixin que crea las clases para ser utilizadas en el css
+@mixin create-class-grid($media){
+  @include desde($media){
+    @for $i from 1 through $gridLenghtDefault{
+      @for $j from 1 through $gridLenghtDefault{
+        .#{$media}-#{$i}-#{$j}{
+            grid-column: $i / span $j;
+        }
+      }
+    }
+  }
+}
