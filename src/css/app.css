@@ -83,6 +83,12 @@
 .h6 {
   font-size: 1rem; }
 
+<<<<<<< HEAD
+=======
+/*@each $media, $size in $breakpoints{
+
+}*/
+>>>>>>> 3e33857ad22411e8f3a5e5602343d3673caa7955
 .width-5 {
   width: 5%; }
 
@@ -181,8 +187,35 @@
     @include flexCenter
   }
 }*/
-.container {
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px; }
+  .form__row__col {
+    padding-right: 5px;
+    padding-left: 5px;
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 100%; }
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"],
+.form input[type="password"],
+.form input[type="search"],
+.form input[type="url"],
+.form input[type="tel"],
+.form textarea {
+  color: #8e9bab;
   width: 100%;
+<<<<<<< HEAD
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
@@ -1753,71 +1786,103 @@
     transition: all .15s ease-in-out; }
 
 .form input, .form textarea {
+=======
+  border: 1px solid #ced4da;
+>>>>>>> 3e33857ad22411e8f3a5e5602343d3673caa7955
   height: 30px;
+  display: block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  -webkit-transition: border-color .15s ease-in-out;
+  transition: border-color .15s ease-in-out;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #8e9bab;
-  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
   font-family: "proxima-nova", sans-serif;
   border-style: solid;
   border-color: #8e9bab;
-  display: block;
-  width: 100%;
-  line-height: 1.5;
-  background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  padding: .375rem .75rem;
-  font-weight: 300;
-  -webkit-transition: border-color .15s ease-in-out;
-  transition: border-color .15s ease-in-out; }
-  .form input:hover, .form textarea:hover {
+  background-color: #fff; }
+  .form input[type="text"]:hover,
+  .form input[type="email"]:hover,
+  .form input[type="number"]:hover,
+  .form input[type="password"]:hover,
+  .form input[type="search"]:hover,
+  .form input[type="url"]:hover,
+  .form input[type="tel"]:hover,
+  .form textarea:hover {
     border-color: #172b4d;
     -webkit-transition: border-color .15s ease-in-out;
     transition: border-color .15s ease-in-out; }
-  .form input:focus, .form textarea:focus {
-    outline: none; }
-  .form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+  .form input[type="text"]:focus,
+  .form input[type="email"]:focus,
+  .form input[type="number"]:focus,
+  .form input[type="password"]:focus,
+  .form input[type="search"]:focus,
+  .form input[type="url"]:focus,
+  .form input[type="tel"]:focus,
+  .form textarea:focus {
+    outline: none;
+    border-color: #172b4d; }
+  .form input[type="text"]::-webkit-input-placeholder,
+  .form input[type="email"]::-webkit-input-placeholder,
+  .form input[type="number"]::-webkit-input-placeholder,
+  .form input[type="password"]::-webkit-input-placeholder,
+  .form input[type="search"]::-webkit-input-placeholder,
+  .form input[type="url"]::-webkit-input-placeholder,
+  .form input[type="tel"]::-webkit-input-placeholder,
+  .form textarea::-webkit-input-placeholder {
     color: #8e9bab;
     font-size: 1rem;
     font-family: "proxima-nova", sans-serif; }
-  .form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+  .form input[type="text"]:-ms-input-placeholder,
+  .form input[type="email"]:-ms-input-placeholder,
+  .form input[type="number"]:-ms-input-placeholder,
+  .form input[type="password"]:-ms-input-placeholder,
+  .form input[type="search"]:-ms-input-placeholder,
+  .form input[type="url"]:-ms-input-placeholder,
+  .form input[type="tel"]:-ms-input-placeholder,
+  .form textarea:-ms-input-placeholder {
     color: #8e9bab;
     font-size: 1rem;
     font-family: "proxima-nova", sans-serif; }
-  .form input::-ms-input-placeholder, .form textarea::-ms-input-placeholder {
+  .form input[type="text"]::-ms-input-placeholder,
+  .form input[type="email"]::-ms-input-placeholder,
+  .form input[type="number"]::-ms-input-placeholder,
+  .form input[type="password"]::-ms-input-placeholder,
+  .form input[type="search"]::-ms-input-placeholder,
+  .form input[type="url"]::-ms-input-placeholder,
+  .form input[type="tel"]::-ms-input-placeholder,
+  .form textarea::-ms-input-placeholder {
     color: #8e9bab;
     font-size: 1rem;
     font-family: "proxima-nova", sans-serif; }
-  .form input::placeholder, .form textarea::placeholder {
+  .form input[type="text"]::placeholder,
+  .form input[type="email"]::placeholder,
+  .form input[type="number"]::placeholder,
+  .form input[type="password"]::placeholder,
+  .form input[type="search"]::placeholder,
+  .form input[type="url"]::placeholder,
+  .form input[type="tel"]::placeholder,
+  .form textarea::placeholder {
     color: #8e9bab;
     font-size: 1rem;
     font-family: "proxima-nova", sans-serif; }
-  .form input:disabled, .form textarea:disabled {
-    opacity: .5; }
-    .form input:disabled:hover, .form textarea:disabled:hover {
-      border-color: #8e9bab; }
+  .form input[type="text"]:disabled,
+  .form input[type="email"]:disabled,
+  .form input[type="number"]:disabled,
+  .form input[type="password"]:disabled,
+  .form input[type="search"]:disabled,
+  .form input[type="url"]:disabled,
+  .form input[type="tel"]:disabled,
+  .form textarea:disabled {
+    opacity: .5;
+    pointer-events: none; }
 
 .form textarea {
-  min-height: 100px; }
-
-.form__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px; }
-  .form__row__col {
-    padding-right: 5px;
-    padding-left: 5px;
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    max-width: 100%; }
+  height: 100%;
+  resize: none; }
 
 .form__group {
   display: -webkit-box;
@@ -1827,12 +1892,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  position: relative;
+  height: 50px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
   .form__group label {
     margin-bottom: 5px;
     color: #172b4d;
     font-size: 1rem;
     font-family: "proxima-nova", sans-serif; }
+<<<<<<< HEAD
   .form__group .is-success label {
     color: #38c550; }
   .form__group .is-success input {
@@ -1848,3 +1919,21 @@
 
 .form.form--round input, .form.form--round textarea {
   border-radius: 5px; }
+=======
+  .form__group label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    font-size: .8rem; }
+  .form__group input[type="text"],
+  .form__group input[type="email"],
+  .form__group input[type="number"],
+  .form__group input[type="password"],
+  .form__group input[type="search"],
+  .form__group input[type="url"],
+  .form__group input[type="tel"],
+  .form__group textarea {
+    border: none;
+    border-bottom: solid 1px #8e9bab; }
+>>>>>>> 3e33857ad22411e8f3a5e5602343d3673caa7955
