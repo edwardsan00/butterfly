@@ -1,0 +1,12 @@
+// @each $name,
+// $value in $map-palette-form {
+//   &.is-#{$name} {
+//     label, p, span, strong,
+//     h1, h2, h3, h4, h5, h6,{
+//       color: $value !important;
+//     }
+//     input, select {
+//       border-color: $value !important;
+//     }
+//   }
+// }

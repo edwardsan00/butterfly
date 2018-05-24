@@ -1,16 +1,42 @@
-// palette
+// default page color
 $white:             #ffffff;
-$black:             #172b4d;
-$blue:              #0477ea;
+$black:             #000000;
+$dark:              #000;
 $green:             #38c550;
-$cyan:              #0065DC;
-$yellow:            #ffeb3b;
 $red:               #ee5f5f;
-$orange:            #ffba2b;
-$gray:              #8e9bab;
-$gray-100:          #f4f5f7;
-$gray-200:          #eaecf0 !default;
-$gray-300:          #b8bec9;
-$gray-400:          #b7c0cf !default;
-$gray-500:          #bec0c3;
+$gray-light:        #eaecf0;
 $anchor-link:       #1a0dab;
+
+// text
+$title: #000;
+$subtitle: #0000;
+$paragraph: #000;
+
+// button
+$btn-primary: #000;
+$btn--primary-text: #000;
+$btn-secondary: #000;
+$btn--secondary-text: #000;
+
+// icons
+$icon-primary: #000;
+$icon-secondary: #000;
+
+// palette
+$primary: #494949;
+$secondary: #909090;
+$palette-1: #1b1b1b;
+$palette-2: #000;
+$palette-3: #000;
+
+
+$map-palette-button:(
+  primary: (
+    background:			$btn-primary,
+    color:          $btn--primary-text,
+  ),
+  secondary: (
+    background: 	  $btn-secondary,
+    color:          $btn--secondary-text,
+  ),
+);

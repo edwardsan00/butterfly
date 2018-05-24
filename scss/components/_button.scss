@@ -8,7 +8,7 @@
   transition: all .15s ease-in-out;
 }
 
-@mixin createButton($bg-color: $gray-300,$front-color: $black,$style: radius, $modify: true) {
+@mixin createButton($bg-color: $gray-light,$front-color: $black,$style: radius, $modify: true) {
   @if $modify{
     @extend    %base-button;
   }
@@ -35,6 +35,6 @@
 }
 @each $name, $value in $map-palette-button{
   .btn--#{$name}{
-    @include createButton($value, $white, radius, false);
+    @include createButton(map-get($value, background), map-get($value, color), radius, false);
   }
 }
