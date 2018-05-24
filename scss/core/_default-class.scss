@@ -12,22 +12,17 @@
 //Sub clase que acompaña a cualquera de los dos contenedores anteriores, para hacer grid
 .container-grid{
   @include create-grid();
-  & > * {
-    grid-column: 1 / span 12;
-  }
+  @include compatibilidad();
 }
 
 //Fila con grid
 .row{
   @include create-grid();
-  grid-auto-flow: row;
-  & > * {
-    grid-column: 1 / span 12;
-  }
+  @include compatibilidad();
 }
 
 //Ejecutando el mixin de clases para cada breakpoint, para que funcione el grid en responsive
 @each $media, $size in $breakpoints{
   @include create-class-grid($media);
-  //Da como resultado las medidas en clases para aplicar Ej. sm-1-12 lg-1-6
+  //Da como resultado las medidas en clases para aplicar Ej. s-1-12 l-1-6
 }
