@@ -2,11 +2,18 @@ $gridLenghtDefault: 12 !global;
 
 //Definiendo el mixin para crear grillas internas a el elemento que la importe
 @mixin create-grid($gridLenght: $gridLenghtDefault, $gridGap: 0){
-  $gridLenghtRecivido: $gridLenght !global;
-  $divisor: 100% / $gridLenght;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax($divisor, 1fr));
-  grid-gap: $gridGap;
+  @supports (display: grid){
+    $gridLenghtRecivido: $gridLenght !global;
+    $divisor: 100% / $gridLenght;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($divisor, 1fr));
+    grid-gap: $gridGap;
+    grid-auto-flow: row dense;
+  }
+  @supports not (display: grid){
+    display: flex;
+    flex-wrap: wrap;
+  }
   @content;
 }
 
@@ -16,9 +23,34 @@ $gridLenghtDefault: 12 !global;
     @for $i from 1 through $gridLenghtDefault{
       @for $j from 1 through $gridLenghtDefault{
         .#{$media}-#{$i}-#{$j}{
-            grid-column: $i / span $j;
+          @supports (display: grid){
+            @if ($i == 1){
+              grid-column: $i / span $j;
+            }
+            @else {
+              grid-column: ($i + 1) / span $j;
+            }
+          }
+          @supports not (display: grid){
+            $value: 100 / $gridLenghtDefault * $j;
+            flex: $value 0 0;
+            order: $i;
+          }
         }
       }
+    }
+  }
+}
+
+@mixin compatibilidad(){
+  @supports (display: grid){
+    & > * {
+      grid-column: 1 / span 12;
+    }
+  }
+  @supports not (display: grid){
+    & > *{
+      width: 100%;
     }
   }
 }

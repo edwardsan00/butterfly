@@ -1,27 +1,69 @@
 .catalogue{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(100px, 1fr);
+  grid-template-rows: minmax(200px, 1fr);
   grid-column-gap: 20px;
   @include desde(m){
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 300px 1fr;
+    align-items: start;
   }
   &-sidebar{
     display: none;
     @include desde(m){
-      display: flex;
-      background-color: tomato;
       grid-column: 1 / span 1;
+      display: grid;
+      grid-row-gap: 10px;
+      background-color: tomato;
+      align-content: start;
     }
   }
-  &-products{
+  &-content{
     background-color: gold;
     grid-column: 1 / span 3;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
     @include desde(m){
       grid-column: 2 / span 3;
     }
+  }
+}
+
+@mixin banner-outstanding($position){
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  @if ($position == center){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@mixin gallery-products($width, $gap){
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
+  grid-gap: $gap;
+}
+
+
+.banner-outstanding{
+  @include banner-outstanding(center);
+}
+.gallery-products{
+  @include gallery-products(250px, 20px);
+}
+
+
+
+
+.el{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:nth-child(odd){
+    background-color: tomato;
+  }
+  &:nth-child(even){
+    background-color: gold;
   }
 }
