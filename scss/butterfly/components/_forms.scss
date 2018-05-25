@@ -4,47 +4,45 @@
 // mterial-basic: style basic material
 // mterial-efect: style material effect label translate
 $form-style: 'material-basic';
-
 // config form all
 // label
 $label-color: $black;
 $label-font-size: 1rem;
 $label-font-family: $font-family;
 // input
-$input-color-text: $gray;
-$input-color-border: $gray;
+$input-color-text: $gray-light;
+$input-color-border: $gray-light;
 $input-font-size: 1rem;
 $input-font-family: $font-family;
 // placeholder
-$placeholder-color: $gray;
+$placeholder-color: $gray-light;
 $placeholder-font-size: 1rem;
 $placeholder-font-family: $font-family;
 // border-radius
 $form-round: 5px;
 // end
-
 @mixin baseInput() {
-  color:                $input-color-text;
-  width:                100%;
-  border:               1px solid #ced4da;
-  height:               30px;
-  display:              block;
-  padding:              .375rem .75rem;
-  font-size:            $input-font-size;
-  transition:           border-color .15s ease-in-out;
-  box-sizing:           border-box;
-  line-height:          1.5;
-  font-weight:          300;
-  font-family:          $input-font-family;
-  border-style:         solid;
-  border-color:         $input-color-border;
-  background-clip:      padding-box;
-  background-color:   #fff;
-  &:hover{
+  color: $input-color-text;
+  width: 100%;
+  border: 1px solid #ced4da;
+  height: 30px;
+  display: block;
+  padding: .375rem .75rem;
+  font-size: $input-font-size;
+  transition: border-color .15s ease-in-out;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: $input-font-family;
+  border-style: solid;
+  border-color: $input-color-border;
+  background-clip: padding-box;
+  background-color: #fff;
+  &:hover {
     border-color: $black;
     transition: border-color .15s ease-in-out;
   }
-  &:focus{
+  &:focus {
     outline: none;
     border-color: $black;
   }
@@ -58,7 +56,128 @@ $form-round: 5px;
     pointer-events: none;
   }
 }
-@mixin positionGrop(){
+
+@mixin baseCheckbox() {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  input[type="checkbox"] {
+    position: relative;
+    top: 0;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    width: .5rem;
+    height: 1rem;
+    &:before {
+      transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+      transform: rotate(-45deg) scale(0, 0);
+      content: "";
+      position: absolute;
+      left: 0.1875rem;
+      top: .1rem;
+      z-index: 1;
+      width: 0.5rem;
+      height: 0.2rem;
+      border: 2px solid #16a085;
+      border-top-style: none;
+      border-right-style: none;
+    }
+    &:checked {
+      &:before {
+        transform: rotate(-45deg) scale(1, 1);
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -.1rem;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      background: #fff;
+      border: 2px solid $gray-light;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@mixin baseRadio() {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  input[type="radio"] {
+    position: relative;
+    top: 0;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    width: .5rem;
+    height: .5rem;
+    &:before {
+      transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+      transform: scale(0, 0);
+      content: "";
+      position: absolute;
+      top: .3rem;
+      left: .25rem;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      width: .5rem;
+      height: .5rem;
+      margin: auto;
+      background: #16a085;
+      border-radius: 50%;
+    }
+    &:checked {
+      &:before {
+        transform: scale(1, 1);
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -.1rem;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      background: #fff;
+      border: 2px solid $gray-light;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@mixin baseSelect() {
+  position: relative;
+  &::before{
+    content: ">";
+    font-family: 'Material Icons';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 18px;
+  }
+  select{
+    width: 100%;
+    height: 30px;
+    appearance: none;
+    padding: .375rem .75rem;
+    box-sizing: border-box;
+    border-color: $input-color-border;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover{
+      border-color: $black;
+      transition: border-color .15s ease-in-out;
+    }
+  }
+}
+
+@mixin positionGrop() {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -66,19 +185,19 @@ $form-round: 5px;
   @content;
 }
 
-@mixin normal-style(){
-  label{
+@mixin normal-style() {
+  label {
     margin-bottom: 5px;
     color: $label-color;
     font-size: $label-font-size;
-    font-family: $label-font-family;      
+    font-family: $label-font-family;
   }
 }
 
-@mixin material-basic(){
+@mixin material-basic() {
   height: 50px;
   justify-content: flex-end;
-  label{
+  label {
     position: absolute;
     left: 0;
     top: 0;
@@ -98,12 +217,24 @@ $form-round: 5px;
   }
 }
 
-@mixin group($style){
+@mixin group($style) {
   @include positionGrop();
   @include normal-style();
-  @if $style == 'material-basic'{
-    @include material-basic();      
+  @if $style=='material-basic' {
+    @include material-basic();
   }
+}
+
+@mixin checkbox() {
+  @include baseCheckbox();
+}
+
+@mixin radio() {
+  @include baseRadio();
+}
+
+@mixin select(){
+  @include baseSelect();
 }
 
 .form {
@@ -136,5 +267,18 @@ $form-round: 5px;
   }
   &__group {
     @include group($form-style);
+    &__checkbox {
+      label {
+        @include checkbox();
+      }
+    }
+    &__radio {
+      label {
+        @include radio();
+      }
+    }
+    &__select{
+      @include select();
+    }
   }
 }
