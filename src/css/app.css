@@ -298,44 +298,6 @@ body {
 .width-100 {
   width: 100%; }
 
-/*@mixin flexCssHelpers {
-  .main-justify {
-    @include mainJustify
-  }
-  .main-distribute {
-    @include mainDistribute
-  }
-  .main-center {
-    @include mainCenter
-  }
-  .main-start {
-    @include mainStart
-  }
-  .main-end {
-    @include mainEnd
-  }
-  .cross-start {
-    @include crossStart
-  }
-  .cross-center {
-    @include crossCenter
-  }
-  .cross-end {
-    @include crossEnd
-  }
-  .flex-reverse {
-    @include flexReverse
-  }
-  .flex-column {
-    @include flexColumn
-  }
-  .flex-column-reverse {
-    @include flexColumnReverse
-  }
-  .abcenter {
-    @include flexCenter
-  }
-}*/
 .container {
   width: 100%;
   max-width: 1200px;
@@ -8662,7 +8624,8 @@ body {
     letter-spacing: 3px; }
     @media screen and (min-width: 721px) {
       .principal-slider__title {
-        font-size: 2em; } }
+        font-size: 2em;
+        color: #172b4d; } }
   .principal-slider__subtitle {
     color: #ffffff;
     font-family: "NovaLight";
@@ -8672,4 +8635,5 @@ body {
     margin-top: .3em; }
     @media screen and (min-width: 721px) {
       .principal-slider__subtitle {
-        font-size: 1em; } }
+        font-size: 1em;
+        color: #172b4d; } }

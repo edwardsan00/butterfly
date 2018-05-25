@@ -16,6 +16,7 @@
     letter-spacing: 3px;
     @include desde(s){
       font-size: 2em;
+      color: $black;
     }
   }&__subtitle{
     color: $white;
@@ -26,6 +27,7 @@
     margin-top: .3em;
     @include desde(s){
       font-size: 1em;
+      color: $black;
     }
   }
 }
