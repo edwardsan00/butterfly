@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'NovaLight';
+  src: url('../../fonts/NovaLight/ProximaNova-Light.eot');
+  src: url('../../fonts/NovaLight/ProximaNova-Light.woff2') format('woff2'),
+       url('../../fonts/NovaLight/ProximaNova-Light.woff') format('woff'),
+       url('../../fonts/NovaLight/ProximaNova-Light.ttf') format('truetype'),
+       url('../../fonts/NovaLight/ProximaNova-Light.svg#ProximaNova-Light') format('svg'),
+       url('../../fonts/NovaLight/ProximaNova-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NovaRegular';
+  src: url('../../fonts/NovaRegular/ProximaNova-Regular.eot');
+  src: url('../../fonts/NovaRegular/ProximaNova-Regular.woff2') format('woff2'),
+       url('../../fonts/NovaRegular/ProximaNova-Regular.woff') format('woff'),
+       url('../../fonts/NovaRegular/ProximaNova-Regular.ttf') format('truetype'),
+       url('../../fonts/NovaRegular/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'),
+       url('../../fonts/NovaRegular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NovaSemi';
+  src: url('../../fonts/NovaSemi/ProximaNova-Semibold.eot');
+  src: url('../../fonts/NovaSemi/ProximaNova-Semibold.woff2') format('woff2'),
+       url('../../fonts/NovaSemi/ProximaNova-Semibold.woff') format('woff'),
+       url('../../fonts/NovaSemi/ProximaNova-Semibold.ttf') format('truetype'),
+       url('../../fonts/NovaSemi/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg'),
+       url('../../fonts/NovaSemi/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NovaBold';
+  src: url('../../fonts/NovaBold/ProximaNova-Bold.eot');
+  src: url('../../fonts/NovaBold/ProximaNova-Bold.woff2') format('woff2'),
+       url('../../fonts/NovaBold/ProximaNova-Bold.woff') format('woff'),
+       url('../../fonts/NovaBold/ProximaNova-Bold.ttf') format('truetype'),
+       url('../../fonts/NovaBold/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg'),
+       url('../../fonts/NovaBold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CatamaranRegular';
+  src: url('../../fonts/CatamaranRegular/Catamaran-Regular.eot');
+  src: url('../../fonts/CatamaranRegular/Catamaran-Regular.woff2') format('woff2'),
+       url('../../fonts/CatamaranRegular/Catamaran-Regular.woff') format('woff'),
+       url('../../fonts/CatamaranRegular/Catamaran-Regular.ttf') format('truetype'),
+       url('../../fonts/CatamaranRegular/Catamaran-Regular.svg#Catamaran-Regular') format('svg'),
+       url('../../fonts/CatamaranRegular/Catamaran-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CatamaranBold';
+  src: url('../../fonts/CatamaranBold/Catamaran-Bold.eot');
+  src: url('../../fonts/CatamaranBold/Catamaran-Bold.woff2') format('woff2'),
+       url('../../fonts/CatamaranBold/Catamaran-Bold.woff') format('woff'),
+       url('../../fonts/CatamaranBold/Catamaran-Bold.ttf') format('truetype'),
+       url('../../fonts/CatamaranBold/Catamaran-Bold.svg#Catamaran-Bold') format('svg'),
+       url('../../fonts/CatamaranBold/Catamaran-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

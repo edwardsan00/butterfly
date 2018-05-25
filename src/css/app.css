@@ -1,3 +1,150 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+body {
+  margin: 0; }
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+a {
+  background-color: transparent;
+  text-decoration: none; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+small {
+  font-size: 80%; }
+
+img {
+  border-style: none;
+  min-width: 100%;
+  height: auto; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+progress {
+  vertical-align: baseline; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+@font-face {
+  font-family: 'NovaLight';
+  src: url("../../fonts/NovaLight/ProximaNova-Light.eot");
+  src: url("../../fonts/NovaLight/ProximaNova-Light.woff2") format("woff2"), url("../../fonts/NovaLight/ProximaNova-Light.woff") format("woff"), url("../../fonts/NovaLight/ProximaNova-Light.ttf") format("truetype"), url("../../fonts/NovaLight/ProximaNova-Light.svg#ProximaNova-Light") format("svg"), url("../../fonts/NovaLight/ProximaNova-Light.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NovaRegular';
+  src: url("../../fonts/NovaRegular/ProximaNova-Regular.eot");
+  src: url("../../fonts/NovaRegular/ProximaNova-Regular.woff2") format("woff2"), url("../../fonts/NovaRegular/ProximaNova-Regular.woff") format("woff"), url("../../fonts/NovaRegular/ProximaNova-Regular.ttf") format("truetype"), url("../../fonts/NovaRegular/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg"), url("../../fonts/NovaRegular/ProximaNova-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NovaSemi';
+  src: url("../../fonts/NovaSemi/ProximaNova-Semibold.eot");
+  src: url("../../fonts/NovaSemi/ProximaNova-Semibold.woff2") format("woff2"), url("../../fonts/NovaSemi/ProximaNova-Semibold.woff") format("woff"), url("../../fonts/NovaSemi/ProximaNova-Semibold.ttf") format("truetype"), url("../../fonts/NovaSemi/ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg"), url("../../fonts/NovaSemi/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NovaBold';
+  src: url("../../fonts/NovaBold/ProximaNova-Bold.eot");
+  src: url("../../fonts/NovaBold/ProximaNova-Bold.woff2") format("woff2"), url("../../fonts/NovaBold/ProximaNova-Bold.woff") format("woff"), url("../../fonts/NovaBold/ProximaNova-Bold.ttf") format("truetype"), url("../../fonts/NovaBold/ProximaNova-Bold.svg#ProximaNova-Bold") format("svg"), url("../../fonts/NovaBold/ProximaNova-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'CatamaranRegular';
+  src: url("../../fonts/CatamaranRegular/Catamaran-Regular.eot");
+  src: url("../../fonts/CatamaranRegular/Catamaran-Regular.woff2") format("woff2"), url("../../fonts/CatamaranRegular/Catamaran-Regular.woff") format("woff"), url("../../fonts/CatamaranRegular/Catamaran-Regular.ttf") format("truetype"), url("../../fonts/CatamaranRegular/Catamaran-Regular.svg#Catamaran-Regular") format("svg"), url("../../fonts/CatamaranRegular/Catamaran-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'CatamaranBold';
+  src: url("../../fonts/CatamaranBold/Catamaran-Bold.eot");
+  src: url("../../fonts/CatamaranBold/Catamaran-Bold.woff2") format("woff2"), url("../../fonts/CatamaranBold/Catamaran-Bold.woff") format("woff"), url("../../fonts/CatamaranBold/Catamaran-Bold.ttf") format("truetype"), url("../../fonts/CatamaranBold/Catamaran-Bold.svg#Catamaran-Bold") format("svg"), url("../../fonts/CatamaranBold/Catamaran-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -64,6 +211,14 @@
 
 .material-icons.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3); }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-family: "NovaRegular";
+  font-size: 16px; }
 
 .h1 {
   font-size: 2.5rem; }
@@ -8339,7 +8494,7 @@
           box-sizing: border-box;
   line-height: 1.5;
   font-weight: 300;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "NovaRegular";
   border-style: solid;
   border-color: #8e9bab;
   background-clip: padding-box;
@@ -8375,7 +8530,7 @@
   .form textarea::-webkit-input-placeholder {
     color: #8e9bab;
     font-size: 1rem;
-    font-family: "proxima-nova", sans-serif; }
+    font-family: "NovaRegular"; }
   .form input[type="text"]:-ms-input-placeholder,
   .form input[type="email"]:-ms-input-placeholder,
   .form input[type="number"]:-ms-input-placeholder,
@@ -8386,7 +8541,7 @@
   .form textarea:-ms-input-placeholder {
     color: #8e9bab;
     font-size: 1rem;
-    font-family: "proxima-nova", sans-serif; }
+    font-family: "NovaRegular"; }
   .form input[type="text"]::-ms-input-placeholder,
   .form input[type="email"]::-ms-input-placeholder,
   .form input[type="number"]::-ms-input-placeholder,
@@ -8397,7 +8552,7 @@
   .form textarea::-ms-input-placeholder {
     color: #8e9bab;
     font-size: 1rem;
-    font-family: "proxima-nova", sans-serif; }
+    font-family: "NovaRegular"; }
   .form input[type="text"]::placeholder,
   .form input[type="email"]::placeholder,
   .form input[type="number"]::placeholder,
@@ -8408,7 +8563,7 @@
   .form textarea::placeholder {
     color: #8e9bab;
     font-size: 1rem;
-    font-family: "proxima-nova", sans-serif; }
+    font-family: "NovaRegular"; }
   .form input[type="text"]:disabled,
   .form input[type="email"]:disabled,
   .form input[type="number"]:disabled,
@@ -8442,7 +8597,7 @@
     margin-bottom: 5px;
     color: #172b4d;
     font-size: 1rem;
-    font-family: "proxima-nova", sans-serif; }
+    font-family: "NovaRegular"; }
   .form__group label {
     position: absolute;
     left: 0;
@@ -8459,3 +8614,62 @@
   .form__group textarea {
     border: none;
     border-bottom: solid 1px #8e9bab; }
+
+.principal-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://picsum.photos/400/300/?chair");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://picsum.photos/400/300/?chair");
+  background-position: center;
+  background-size: cover;
+  padding: 1.4em; }
+  @media screen and (min-width: 721px) {
+    .principal-slider {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 300px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      text-align: center;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      background-image: url("https://picsum.photos/900/300/?chair");
+      height: 400px;
+      padding: 5em 5em; } }
+  .principal-slider__title {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+    @media screen and (min-width: 721px) {
+      .principal-slider__title {
+        font-size: 2em; } }
+  .principal-slider__subtitle {
+    color: #ffffff;
+    font-family: "NovaLight";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8em;
+    margin-top: .3em; }
+    @media screen and (min-width: 721px) {
+      .principal-slider__subtitle {
+        font-size: 1em; } }

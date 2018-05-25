@@ -1,0 +1,24 @@
+@mixin principal-slider($main-axis: center, $cross-axis: center, $height: 300px){
+  display: flex;
+  height: $height;
+  flex-direction: column;
+  text-align: center;
+  @if($main-axis == left){
+    align-items: flex-start;
+  }
+  @if($main-axis == center){
+    align-items: center;
+  }
+  @if($main-axis == right){
+    align-items: flex-end;
+  }
+  @if($cross-axis == top){
+    justify-content: flex-start;
+  }
+  @if($cross-axis == center){
+    justify-content: center;
+  }
+  @if($cross-axis == bottom){
+    justify-content: flex-end;
+  }
+}
