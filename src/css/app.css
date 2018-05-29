@@ -8364,7 +8364,7 @@ body {
 
 .btn, .btn--primary, .btn--secondary {
   display: inline-block;
-  padding: .8rem 1.6rem;
+  padding: .8rem 2.5rem;
   cursor: pointer;
   border: 0;
   text-decoration: none;
@@ -8868,7 +8868,9 @@ body {
   font-family: "NovaSemi";
   font-size: 2em;
   color: #000000;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: .80px;
+  text-transform: uppercase; }
   @media screen and (min-width: 990px) {
     .slider-products__title {
       font-size: 1.7em; } }
@@ -8882,7 +8884,18 @@ body {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0 auto;
+  width: 300px; }
+  @media screen and (min-width: 600px) {
+    .slider-products__content {
+      width: 600px; } }
+  @media screen and (min-width: 990px) {
+    .slider-products__content {
+      width: 900px; } }
+  @media screen and (min-width: 1201px) {
+    .slider-products__content {
+      width: 1200px; } }
 
 .slider-products__item {
   display: -webkit-box;
@@ -8895,7 +8908,27 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em; }
+  padding: 0 1em;
+  position: relative; }
+  .slider-products__item.discount:before {
+    content: "30%";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    background-color: #000000;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 1; }
 
 .slider-products__content-img {
   display: -webkit-box;
@@ -8907,7 +8940,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: tomato;
+  background-color: #FEFEFE;
   width: 250px;
   height: 250px;
   position: relative; }
@@ -8923,12 +8956,19 @@ body {
   margin-top: 1em;
   margin-bottom: .1em;
   letter-spacing: .34px; }
+  @media screen and (min-width: 990px) {
+    .slider-products__name {
+      font-size: 1em; } }
 
 .slider-products__price {
   text-align: center;
   font-size: 1.2em;
   margin-bottom: .1em;
+  font-family: "NovaLight";
   letter-spacing: .35px; }
+  @media screen and (min-width: 990px) {
+    .slider-products__price {
+      font-size: .8em; } }
 
 .slider-products__from {
   color: #8E8E8E; }
@@ -8957,6 +8997,9 @@ body {
   display: block;
   color: #8E8E8E;
   font-size: 1.2em; }
+  @media screen and (min-width: 990px) {
+    .slider-products__start {
+      font-size: .8em; } }
   .slider-products__start.active {
     color: #E4BD30; }
 
@@ -8967,10 +9010,16 @@ body {
   font-size: .8em;
   color: #8E8E8E;
   letter-spacing: .40px; }
+  @media screen and (min-width: 990px) {
+    .slider-products__qualify {
+      font-size: .6em; } }
 
 .slider-products__btn {
-  margin: 1em 0;
+  margin-top: 1em;
   width: 70%;
   text-transform: uppercase;
   font-size: "NovaBold";
   font-size: .8em; }
+  @media screen and (min-width: 990px) {
+    .slider-products__btn {
+      width: 145px; } }
