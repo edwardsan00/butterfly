@@ -22,6 +22,6 @@
         }
         });
         gulp.watch('./scss/**/**/*.scss', ['sass']);
-        gulp.watch("./*.html").on('change', browserSync.reload);
+        gulp.watch("./**/**/*.html").on('change', browserSync.reload);
     });
     gulp.task('default', ['server']);

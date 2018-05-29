@@ -3,6 +3,12 @@
   height: $height;
   flex-direction: column;
   text-align: center;
+  >:not(img){
+    padding: 1.4em;
+    @include desde(s){
+      padding: 5em 7em;
+    }
+  }
   @if($main-axis == left){
     align-items: flex-start;
   }

@@ -84,7 +84,11 @@
           order: $i;
       }
   }
+  
 
+}
+.center {
+    @include flexCenter;
 }
 
 // helpers

@@ -1,6 +1,6 @@
 //Contenedor de rows con width maximo, sin grid
 .container{
-  width: 100%;
+  width: 90%;
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
@@ -25,4 +25,12 @@
 @each $media, $size in $breakpoints{
   @include create-class-grid($media);
   //Da como resultado las medidas en clases para aplicar Ej. s-1-12 l-1-6
+}
+
+
+.btn-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,21 +1,22 @@
 %base-button {
   display         : inline-block;
-  padding         : .6em 1.4em;
+  padding         : .8rem 2.5rem;
   cursor          : pointer;
-  border          : none;
+  border          : 0;
   text-decoration : none;
   letter-spacing: 0.5px;
   transition: all .15s ease-in-out;
+  cursor: pointer;
 }
 
 @mixin createButton($bg-color: $gray-light,$front-color: $black,$style: radius, $modify: true) {
   @if $modify{
     @extend    %base-button;
   }
-  background : $bg-color;
+  background-color : $bg-color;
   color      : $front-color;
   &:hover {
-    background      : darken($bg-color, 5);
+    background      : darken($bg-color, 10);
     text-decoration : none;
     transition: all .15s ease-in-out;
   }
@@ -23,9 +24,9 @@
   //   transform : scale(.97);
   // }
   @if $style == radius {
-    border-radius : .25em;
+    border-radius : .25rem;
   } @else if $style == round {
-    border-radius : 1.25em;
+    border-radius : 1.6rem;
   }
   @content;
 }
@@ -35,6 +36,6 @@
 }
 @each $name, $value in $map-palette-button{
   .btn--#{$name}{
-    @include createButton(map-get($value, background), map-get($value, color), radius, false);
+    @include createButton(map-get($value, background), map-get($value, color), round, true);
   }
 }
