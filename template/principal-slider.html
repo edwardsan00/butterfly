@@ -14,10 +14,10 @@
         <div class="swiper-wrapper row">
             <div class="swiper-slide principal-slider__slider">
               <img  class="principal-slider__img"
-                    srcset="https://picsum.photos/600/600/?black 360w,
-                            https://picsum.photos/1400/600/?blue 720w,
-                            https://picsum.photos/2400/600/?red 1200w"
-                    src="https://picsum.photos/1600/600/?yellow"
+                    srcset="https://picsum.photos/600/600/?pink 360w,
+                            https://picsum.photos/1400/600/?orange 720w,
+                            https://picsum.photos/2400/600/?cyan 1200w"
+                    src="https://picsum.photos/1600/600/?gold"
                     alt="Elva dressed as a fairy">
               <div class="principal-slider__content">
                 <h2 class="principal-slider__title">new collection</h2>
@@ -36,17 +36,31 @@
                 <p class="principal-slider__subtitle">new collection</p>
               </div>
             </div>
+            <div class="swiper-slide principal-slider__slider">
+              <img  class="principal-slider__img"
+                    srcset="https://picsum.photos/600/600/?pink 360w,
+                            https://picsum.photos/1400/600/?orange 720w,
+                            https://picsum.photos/2400/600/?cyan 1200w"
+                    src="https://picsum.photos/1600/600/?gold"
+                    alt="Elva dressed as a fairy">
+              <div class="principal-slider__content">
+                <h2 class="principal-slider__title">new collection</h2>
+                <p class="principal-slider__subtitle">shop online for you</p>
+              </div>
+            </div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
         <div class="principal-slider__prev">
-          <span class="material-icons">arrow_back_ios</span>
+          <span class="principal-slider__icon material-icons">keyboard_arrow_left</span>
         </div>
         <div class="principal-slider__next">
-          <span class="material-icons">arrow_forward_ios</span>
+          <span class="principal-slider__icon material-icons">keyboard_arrow_right</span>
         </div>
+
+        <div class="swiper-pagination"></div>
 
     </div>
     <!--  <div class="container-fluid">
@@ -111,11 +125,10 @@
   -->
 
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
   </body>
   <!--<script src="../src/library/jquery/jquery-3.3.1.min.js" charset="utf-8"></script>
   <script src="../src/library/owl/owl.carousel.min.js" charset="utf-8"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
       loop: true,
@@ -125,6 +138,10 @@
       navigation: {
         nextEl: '.principal-slider__next',
         prevEl: '.principal-slider__prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
       }
     });
   </script>

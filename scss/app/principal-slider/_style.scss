@@ -1,14 +1,14 @@
 .principal-slider{
   position: relative;
   height: 300px;
-  @include desde(s){
+  @include desde(m){
     height: 400px;
   }
   &__slider{
     position: relative;
     @include principal-slider(center, center);
     background-color: #000000;
-    @include desde(s){
+    @include desde(m){
       @include principal-slider(right, center);
     }
   }
@@ -25,12 +25,20 @@
   }
   &__title{
     color: $white;
+    font-family: $NovaSemi;
     text-transform: uppercase;
     letter-spacing: 3px;
     position: relative;
+    font-size: 2em;
     @include desde(s){
-      font-size: 2em;
+      font-size: 2.2em;
+    }
+    @include desde(m){
+      font-size: 2.5;
       color: $black;
+    }
+    @include desde(l){
+      font-size: 3em;
     }
   }
   &__subtitle{
@@ -39,30 +47,62 @@
     font-family: $NovaLight;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: .8em;
+    font-size: 1em;
     margin-top: .3em;
     @include desde(s){
-      font-size: 1em;
+      font-size: 1.1em;
+    }
+    @include desde(m){
+      font-size: 1.25em;
       color: $black;
+    }
+    @include desde(l){
+      font-size: 1.5em;
     }
   }
   &__next,
   &__prev{
     position: absolute;
     top: 50%;
-    width: 27px;
-    height: 44px;
     margin-top: -22px;
     z-index: 10;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: 27px 44px;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: rgba($white, .6);
+    &:hover{
+      background-color: rgba($white, 1);
+    }
   }
   &__next{
-    right: 10px;
+    right: 0;
   }
   &__prev{
-    left: 10px;
+    left: 0;
+  }
+  &__icon{
+    font-size: 30px;
+    color: $black;
+    @include desde(m){
+      font-size: 40px;
+    }
+  }
+}
+
+.swiper-pagination-bullet{
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 0 !important;
+  background-color: $gray-light !important;
+  @include desde(s){
+    width: 12px !important;
+    height: 12px !important;
+  }
+  &-active{
+    background-color: $white !important;
   }
 }
