@@ -1,0 +1,31 @@
+.gallery-struck{
+  display: grid;
+  grid-template-areas:
+    'priority-4 priority-4 priority-3 priority-3'
+    'priority-2 priority-2 priority-2 priority-2'
+    'priority-1 priority-1 priority-1 priority-1';
+  grid-template-rows: 250px 250px 400px;
+  grid-gap: 20px;
+  @include desde(m){
+    grid-template-areas:
+      'priority-4 priority-3 priority-1 priority-1'
+      'priority-2 priority-2 priority-1 priority-1';
+    grid-template-rows: 250px 250px;
+  }
+  &--small{
+    grid-area: priority-4;
+    background-color: teal;
+    &:nth-child(odd){
+      grid-area: priority-3;
+      background-color: lightblue;
+    }
+  }
+  &--mediun{
+    grid-area: priority-2;
+    background-color: tomato;
+  }
+  &--large{
+    grid-area: priority-1;
+    background-color: gold;
+  }
+}
