@@ -1,116 +1,93 @@
-@mixin flex-order {
-  @for $i from 1 through $max-grid {
-    .order-#{$i} {
-      order: $i;
-    }
-  }
-}
-
-@mixin flex {
+.flex{
   display: flex;
   flex-wrap: wrap;
-}
-
-@mixin main-justify {
-  @include flex;
-  justify-content: space-between;
-}
-
-@mixin main-distribute {
-  @include flex;
-  justify-content: space-around;
-}
-
-@mixin main-center {
-  @include flex;
-  justify-content: center;
-}
-
-@mixin main-start {
-  @include flex;
-  justify-content: flex-start;
-}
-
-@mixin main-end {
-  @include flex;
-  justify-content: flex-end;
-}
-
-@mixin cross-start {
-  @include flex;
-  align-items: flex-start;
-  align-content: flex-start;
-}
-
-@mixin cross-center {
-  @include flex;
-  align-items: center;
-  align-content: center;
-}
-
-@mixin cross-end {
-  @include flex;
-  align-items: flex-end;
-  align-content: flex-end;
-}
-
-@mixin flex-reverse {
-  @include flex;
-  flex-direction: row-reverse;
-}
-
-@mixin flex-column {
-  @include flex;
-  flex-direction: column;
-}
-
-@mixin flex-column-reverse {
-  @include flex;
-  flex-direction: column-reverse;
-}
-
-@mixin flex-center() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-@mixin flexCssHelpers {
-  .main-justify {
-    @include mainJustify
+  &.flex-nowrap{
+    flex-wrap: nowrap;
   }
-  .main-distribute {
-    @include mainDistribute
+  &.flex--right{
+      justify-content: flex-end;
   }
-  .main-center {
-    @include mainCenter
+  &.flex--centerx{
+      justify-content: center;
   }
-  .main-start {
-    @include mainStart
+  &.flex--left{
+      justify-content: flex-start;
   }
-  .main-end {
-    @include mainEnd
+  &.flex--top{
+      align-items: flex-start;
   }
-  .cross-start {
-    @include crossStart
+  &.flex--centery{
+      align-items: center;
   }
-  .cross-center {
-    @include crossCenter
+  &.flex--bottom{
+      align-items: flex-end;
   }
-  .cross-end {
-    @include crossEnd
+  &.flex--btw{
+      justify-content: space-between;
   }
-  .flex-reverse {
-    @include flexReverse
+
+  
+  &--dc{
+      flex-direction: column;
+      &.flex--right{
+          align-items: flex-end;
+      }
+      &.flex--centerx{
+          align-items: center;
+      }
+      &.flex--left{
+          align-items: flex-start;
+      }
+      &.flex--top{
+          justify-content: flex-start;
+      }
+      &.flex--centery{
+          justify-content: center;
+      }
+      &.flex--bottom{
+          justify-content: flex-end;
+      }
+      &.flex--btw{
+          justify-content: space-between;
+      }
   }
-  .flex-column {
-    @include flexColumn
+
+  //direction row es el default
+  &--dr{
+      flex-direction: row;
+      &.flex--right{
+          justify-content: flex-end;
+      }
+      &.flex--centerx{
+          justify-content: center;
+      }
+      &.flex--left{
+          justify-content: flex-start;
+      }
+      &.flex--top{
+          align-items: flex-start;
+      }
+      &.flex--centery{
+          align-items: center;
+      }
+      &.flex--bottom{
+          align-items: flex-end;
+      }
+      &.flex--btw{
+          justify-content: space-between;
+      }
   }
-  .flex-column-reverse {
-    @include flexColumnReverse
+
+  //Orders Define
+  @for $i from 1 through 5{
+      &--order#{$i}{
+          order: $i;
+      }
   }
-  .abcenter {
-    @include flexCenter
-  }
+
+}
+
+// helpers
+.flex-width-auto{
+    flex: auto 1 0;
 }

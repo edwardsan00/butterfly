@@ -1,29 +1,87 @@
-.footer{
+.footer {
   background-color: $footer-bg;
+  padding: 50px 0px;
+  &__title {
+    color: darken($color: $white, $amount: 9%);
+    font-size: 1rem;
+    text-align: center;
+    padding: 0px 20px;
+  }
+  .footer-content {
+    border-bottom: solid 1px darken($color: $white, $amount: 60%);
+    cursor: pointer;
+    &__title{
+      color: darken($color: $white, $amount: 9%);
+      font-size: .8rem;
+      padding: 1rem .8rem;
+      margin-bottom: .3rem;
+    }
+    &__list {
+      margin: 0;
+      display: none;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: height 350ms ease-in-out;
+      height: 0;
+      li {
+        padding: .2rem .8rem;
+        color: darken($color: $white, $amount: 30%);
+        font-size: .8rem;
+        &:last-child { 
+          padding-bottom: 1rem;
+        }
+        a{ 
+          color: darken($color: $white, $amount: 30%);
+        }
+      }
+      cursor: pointer;
+      &.is-visible {
+        display: block;
+	      height: auto;
+      }
+    }
+  }
+  &-bank{
+    padding: 1.5em 2em;
+    &__item{
+      width: 20%;
+      padding: 5px;
+      &__image{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &-copy{
+    color: white;
+    font-size: .7em;
+    text-align: center;
+    padding: 0em 2em;
+    
+  }
 }
 
-.newsletter{
+.newsletter {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: $black;
   padding: 50px 0px;
   input[type="text"],
   input[type="email"]{
     background-color: transparent;
     border: none;
     height: 50px;
-    border: solid 1px $gray-light;
+    border: solid 1px darken($color: $white, $amount: 60%);
     border-right: none;
     border-radius: 50px 0 0 50px;
     font-size: 14px;
     padding: 0 30px;
     box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.5);
+    color: darken($color: $white, $amount: 20%);
   }
   button{
-    background-color: $gray-light;
+    background-color: darken($color: $white, $amount: 10%);
     border-radius: 0 50px 50px 0;
     padding: 0px 20px;
     border: none;
