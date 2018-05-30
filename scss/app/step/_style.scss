@@ -1,0 +1,41 @@
+.step{
+  &__content{
+    display: flex;
+    flex-direction: column;
+    &__item{
+      border-top: solid 1px $gray-light;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 30px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      &__left{
+        display: flex;
+        flex-direction: row;
+        &__icon{
+          margin-right: 20px;
+        }
+        &__title{
+          font-family: $PrimaryBold;
+        }
+      }
+      &__right{
+        &__plus{
+
+        }
+      }
+      &__desc{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        display: none;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: height 350ms ease-in-out;
+        height: 0;
+      }
+    }
+  }
+}

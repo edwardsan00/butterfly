@@ -4,7 +4,7 @@ $start-active: #E4BD30;
 .slider-products{
   &__title{
     justify-items: center;
-    font-family: $NovaSemi;
+    font-family: $PrimarySemi;
     font-size: 2em;
     color: $black;
     text-align: center;
@@ -84,7 +84,7 @@ $start-active: #E4BD30;
     text-align: center;
     font-size: 1.2em;
     margin-bottom: .1em;
-    font-family: $NovaLight;
+    font-family: $PrimaryLight;
     letter-spacing: .35px;
     @include desde(m){
       font-size: .8em;
@@ -130,7 +130,7 @@ $start-active: #E4BD30;
     margin-top: 1em;
     width: 70%;
     text-transform: uppercase;
-    font-size: $NovaBold;
+    font-family: $PrimaryBold;
     font-size: .8em;
     @include desde(m){
       width: 145px;

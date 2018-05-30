@@ -16,7 +16,7 @@
   }
   &__title{
     position: relative;
-    font-family: $NovaLight;
+    font-family: $PrimaryLight;
     font-size: 1.6em;
     text-transform: uppercase;
     @include desde(m){
@@ -25,7 +25,7 @@
   }
   &__subtitle{
     position: relative;
-    font-family: $NovaSemi;
+    font-family: $PrimarySemi;
     font-size: 1.6em;
     text-transform: uppercase;
     @include desde(l){

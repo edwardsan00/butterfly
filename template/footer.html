@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="/src/css/app.css">
   <title>Document</title>
 </head>
@@ -13,7 +14,7 @@
   <footer class="footer">
     <div class="container-fluid">
       <div class="row">
-        <div class="">
+        <div class="footer__title">
           <p>Regístrese para recibir nuestras últimas noticias y ofertas</p>
         </div>
         <div class="newsletter">
@@ -22,29 +23,29 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="footer__menu">
 
-        <div class="footer__list">
-          <h3>SOBRE NOSOTROS</h3>
-          <ul>
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">SOBRE NOSOTROS</h3>
+          <ul class="footer__menu__content__list">
             <li><a href="">Quienes somos?</a></li>
             <li><a href="">Contáctanos</a></li>
             <li><a href="">Para empresas</a></li>
           </ul>
         </div>
 
-        <div class="footer__list">
-          <h3>MI CUENTA</h3>
-          <ul>
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">MI CUENTA</h3>
+          <ul class="footer__menu__content__list">
             <li><a href="">Iniciar Sesión</a></li>
             <li><a href="">Crear Cuenta Nueva</a></li>
             <li><a href="">Olvidaste tu contraseña?</a></li>
           </ul>
         </div>
 
-        <div class="footer__list">
-          <h3>SERVICIO AL CLIENTE</h3>
-          <ul>
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">SERVICIO AL CLIENTE</h3>
+          <ul class="footer__menu__content__list">
             <li><a href="">Preguntas Frecuentes</a></li>
             <li><a href="">Medios de pago</a></li>
             <li><a href="">información de Delivery</a></li>
@@ -53,32 +54,137 @@
           </ul>
         </div>
 
-        <div class="footer__list">
-          <h3>LLAMANOS</h3>
-          <ul>
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">LLAMANOS</h3>
+          <ul class="footer__menu__content__list">
             <li><a href="">Telf: (01) 555 5555</a></li>
             <li><a href="">Cel: 555 555 555</a></li>
             <li>Lunes a Sabado <br> de 8:00 am. a 7:00 pm.</li>
           </ul>
         </div>
 
-        <div class="footer__list">
-          <h3>SIGUENOS</h3>
-          <ul>
-            <li>
-              <a href="">f</a>
-              <a href="">i</a>
-              <a href="">p</a>
-              <a href="">y</a>
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">SIGUENOS</h3>
+          <ul class="footer__menu__content__list">
+            <li class="footer__menu__content__list__social">
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-pinterest-p"></i></a>
+              <a href=""><i class="fab fa-youtube"></i></a>
             </li>
-            <li class="footer__list__book"><a href="">Libro de reclamos</a></li>
           </ul>
+          <div class="footer__menu__content__book">
+            <a href="">
+              <i class="fas fa-book-open"></i> Libro de reclamaciones
+            </a>
+          </div>
         </div>
         
       </div>
 
+      <div class="container flex footer-bank flex--centerx">
+        <div class="footer-bank__item">
+          <img class="footer-bank__item__image" src="../images/logo-visa.png" alt="">
+        </div>
+        <div class="footer-bank__item">
+          <img class="footer-bank__item__image" src="../images/logo-visa.png" alt="">
+        </div>
+        <div class="footer-bank__item">
+          <img class="footer-bank__item__image" src="../images/logo-visa.png" alt="">
+        </div>
+        <div class="footer-bank__item">
+          <img class="footer-bank__item__image" src="../images/logo-visa.png" alt="">
+        </div>
+        <div class="footer-bank__item">
+          <img class="footer-bank__item__image" src="../images/logo-visa.png" alt="">
+        </div>
+        <div class="footer-bank__item">
+          <img class="footer-bank__item__image" src="../images/logo-visa.png" alt="">
+        </div>
+        <div class="footer-bank__item">
+          <img class="footer-bank__item__image" src="../images/logo-visa.png" alt="">
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        <p>Enova 2017 Todos los derechos reservados</p>
+      </div>
+
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      const cl = q => console.log(q);
+
+
+      // Show an element
+      var show = function (elem) {
+
+        // Get the natural height of the element
+        var getHeight = function () {
+          elem.style.display = 'block'; // Make it visible
+          var height = elem.scrollHeight + 'px'; // Get it's height
+          elem.style.display = ''; //  Hide it again
+          return height;
+        };
+
+        var height = getHeight(); // Get the natural height
+        elem.classList.add('is-visible'); // Make the element visible
+        elem.style.height = height; // Update the max-height
+
+        // Once the transition is complete, remove the inline max-height so the content can scale responsively
+        window.setTimeout(function () {
+          elem.style.height = '';
+        }, 350);
+
+      };
+
+      // Hide an element
+      var hide = function (elem) {
+
+        // Give the element a height to change from
+        elem.style.height = elem.scrollHeight + 'px';
+
+        // Set the height back to 0
+        window.setTimeout(function () {
+          elem.style.height = '0';
+        }, 1);
+
+        // When the transition is complete, hide it
+        window.setTimeout(function () {
+          elem.classList.remove('is-visible');
+        }, 350);
+
+      };
+
+      // Toggle element visibility
+      var toggle = function (elem, timing) {
+
+        // If the element is visible, hide it
+        if (elem.classList.contains('is-visible')) {
+          hide(elem);
+          return;
+        }
+
+        // Otherwise, show it
+        show(elem);
+
+      };
+      if(window.innerWidth < 1024){
+        var items = document.querySelectorAll('.footer__menu__content');
+        items.forEach(function(el, index, array){
+          el.addEventListener('click', function() {
+            toggle(this.querySelector('ul'), 3000)
+            this.classList.toggle('active');
+          });
+        })
+      }
+
+
+    });
+
+  </script>
   
 </body>
 </html>
