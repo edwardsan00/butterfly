@@ -1,0 +1,54 @@
+@mixin banner-outstanding($main-axis: center, $cross-axis: center, $text: center){
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: $text;
+  >:not(img){
+    padding: 1em;
+    @include desde(s){
+      //padding: 1em 2em;
+    }
+  }
+  @if($main-axis == left){
+    align-items: flex-start;
+    >:not(img){
+      padding-left: 1.5em;
+      @include desde(s){
+        //padding: 1em 2em;
+      }
+    }
+  }
+  @if($main-axis == center){
+    align-items: center;
+  }
+  @if($main-axis == right){
+    align-items: flex-end;
+    >:not(img){
+      padding-right: 1.5em;
+      @include desde(s){
+        //padding: 1em 2em;
+      }
+    }
+  }
+  @if($cross-axis == top){
+    justify-content: flex-start;
+    >:not(img){
+      padding-top: 2em;
+      @include desde(s){
+        //padding: 1em 2em;
+      }
+    }
+  }
+  @if($cross-axis == center){
+    justify-content: center;
+  }
+  @if($cross-axis == bottom){
+    justify-content: flex-end;
+    >:not(img){
+      padding-bottom: 2em;
+      @include desde(s){
+        //padding: 1em 2em;
+      }
+    }
+  }
+}

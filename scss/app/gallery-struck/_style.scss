@@ -1,31 +1,84 @@
 .gallery-struck{
   display: grid;
-  grid-template-areas:
-    'priority-4 priority-4 priority-3 priority-3'
-    'priority-2 priority-2 priority-2 priority-2'
-    'priority-1 priority-1 priority-1 priority-1';
-  grid-template-rows: 250px 250px 400px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 180px 180px 250px 400px;
+  grid-auto-flow: row dense;
   grid-gap: 20px;
+  @include desde(xs){
+    grid-template-rows: 250px 250px 400px;
+  }
   @include desde(m){
-    grid-template-areas:
-      'priority-4 priority-3 priority-1 priority-1'
-      'priority-2 priority-2 priority-1 priority-1';
     grid-template-rows: 250px 250px;
+    grid-gap: 30px;
   }
   &--small{
-    grid-area: priority-4;
+    grid-column: 1 / 5;
     background-color: teal;
-    &:nth-child(odd){
-      grid-area: priority-3;
+    position: relative;
+    cursor: pointer;
+    @include banner-outstanding(left, center, left);
+    @include desde(xs){
+      grid-column: 1 / 3;
+    }
+    @include desde(m){
+      grid-column: 1 / 2;
+    }
+    &:nth-child(even){
+      grid-column: 1 / 5;
       background-color: lightblue;
+      @include banner-outstanding(left, center, left);
+      @include desde(xs){
+        grid-column: 3 / 5;
+      }
+      @include desde(m){
+        grid-column: 2 / 3;
+      }
     }
   }
   &--mediun{
-    grid-area: priority-2;
+    grid-column: 1 / 5;
     background-color: tomato;
+    position: relative;
+    cursor: pointer;
+    @include banner-outstanding(right, center, center);
+    @include desde(m){
+      grid-column: 1 / 3;
+    }
   }
   &--large{
-    grid-area: priority-1;
+    grid-column: 1 / 5;
     background-color: gold;
+    position: relative;
+    cursor: pointer;
+    @include banner-outstanding(center, top, center);
+    @include desde(m){
+      grid-column: 3 / 5;
+      grid-row: 1 / 3;
+    }
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+  }
+  &__title{
+    position: relative;
+    font-family: $NovaLight;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    @include desde(m){
+      font-size: 1.9em;
+    }
+  }
+  &__subtitle{
+    position: relative;
+    font-family: $NovaSemi;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    @include desde(l){
+      font-size: 1.9em;
+    }
   }
 }
