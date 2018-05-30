@@ -7,15 +7,21 @@ $h4:                rem($font-size-base * 1.5) !default;
 $h5:                rem($font-size-base * 1.25) !default;
 $h6:                rem($font-size-base) !default;
 // font family
-$NovaLight: 'NovaLight';
-$NovaRegular: 'NovaRegular';
-$NovaSemi: 'NovaSemi';
-$NovaBold: 'NovaBold';
-$CatamaranRegular: 'CatamaranRegular';
-$CatamaranBold: 'CatamaranBold';
+$PrimaryLight: 'NovaLight';
+$PrimaryRegular: 'NovaRegular';
+$PrimarySemi: 'NovaSemi';
+$PrimaryBold: 'NovaBold';
+$PrimaryExtra: 'NovaBold';
 
-$font-family: $NovaRegular;
-$font-secundary: $CatamaranRegular;
+$SecondaryLight: '';
+$SecondaryRegular: 'CatamaranRegular';
+$SecondarySemi: '';
+$SecondaryBold: 'CatamaranBold';
+$SecondaryExtra: '';
+
+
+$font-family: $PrimaryRegular;
+$font-secundary: $SecondaryRegular;
 
 $headings-map: (
   h1: $h1,

@@ -23,29 +23,29 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="footer__menu">
 
-        <div class="footer-content main-center flex-column">
-          <h3 class="footer-content__title">SOBRE NOSOTROS</h3>
-          <ul class="footer-content__list">
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">SOBRE NOSOTROS</h3>
+          <ul class="footer__menu__content__list">
             <li><a href="">Quienes somos?</a></li>
             <li><a href="">Contáctanos</a></li>
             <li><a href="">Para empresas</a></li>
           </ul>
         </div>
 
-        <div class="footer-content main-center flex-column">
-          <h3 class="footer-content__title">MI CUENTA</h3>
-          <ul class="footer-content__list">
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">MI CUENTA</h3>
+          <ul class="footer__menu__content__list">
             <li><a href="">Iniciar Sesión</a></li>
             <li><a href="">Crear Cuenta Nueva</a></li>
             <li><a href="">Olvidaste tu contraseña?</a></li>
           </ul>
         </div>
 
-        <div class="footer-content main-center flex-column">
-          <h3 class="footer-content__title">SERVICIO AL CLIENTE</h3>
-          <ul class="footer-content__list">
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">SERVICIO AL CLIENTE</h3>
+          <ul class="footer__menu__content__list">
             <li><a href="">Preguntas Frecuentes</a></li>
             <li><a href="">Medios de pago</a></li>
             <li><a href="">información de Delivery</a></li>
@@ -54,26 +54,30 @@
           </ul>
         </div>
 
-        <div class="footer-content main-center flex-column">
-          <h3 class="footer-content__title">LLAMANOS</h3>
-          <ul class="footer-content__list">
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">LLAMANOS</h3>
+          <ul class="footer__menu__content__list">
             <li><a href="">Telf: (01) 555 5555</a></li>
             <li><a href="">Cel: 555 555 555</a></li>
             <li>Lunes a Sabado <br> de 8:00 am. a 7:00 pm.</li>
           </ul>
         </div>
 
-        <div class="footer-content main-center flex-column">
-          <h3 class="footer-content__title">SIGUENOS</h3>
-          <ul class="footer-content__list">
-            <li>
-              <a href=""><span class="icon-butterfly-facebook"></span></a>
-              <a href=""><span class="icon-butterfly-instagram"></span></a>
-              <a href=""><span class="icon-butterfly-pinterest"></span></a>
-              <a href=""><span class="icon-butterfly-youtube"></span></a>
+        <div class="footer__menu__content main-center flex-column">
+          <h3 class="footer__menu__content__title">SIGUENOS</h3>
+          <ul class="footer__menu__content__list">
+            <li class="footer__menu__content__list__social">
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-pinterest-p"></i></a>
+              <a href=""><i class="fab fa-youtube"></i></a>
             </li>
           </ul>
-          <div class="footer-content__book"><a href="">Libro de reclamos</a></div>
+          <div class="footer__menu__content__book">
+            <a href="">
+              <i class="fas fa-book-open"></i> Libro de reclamaciones
+            </a>
+          </div>
         </div>
         
       </div>
@@ -167,14 +171,15 @@
         show(elem);
 
       };
-
-      var items = document.querySelectorAll('.footer-content');
-      items.forEach(function(el, index, array){
-        el.addEventListener('click', function() {
-          toggle(this.querySelector('ul'), 3000)
-        });
-        //cl(el.querySelector('ul'))
-      })
+      if(window.innerWidth < 1024){
+        var items = document.querySelectorAll('.footer__menu__content');
+        items.forEach(function(el, index, array){
+          el.addEventListener('click', function() {
+            toggle(this.querySelector('ul'), 3000)
+            this.classList.toggle('active');
+          });
+        })
+      }
 
 
     });
