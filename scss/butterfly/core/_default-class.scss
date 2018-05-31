@@ -41,3 +41,19 @@
 .t-black{
   color: $black;
 }
+
+.title{
+  justify-items: center;
+  font-family: $PrimarySemi;
+  font-size: 2em;
+  color: $black;
+  text-align: center;
+  letter-spacing: .90px;
+  text-transform: uppercase;
+  @include desde(m){
+    font-size: 1.7em;
+  }
+  @include desde(l){
+    font-size: 1.4em;
+  }
+}

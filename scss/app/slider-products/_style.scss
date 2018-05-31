@@ -2,7 +2,7 @@ $bg-product: #FEFEFE;
 $gray-400: #8E8E8E;
 $start-active: #E4BD30;
 .slider-products{
-  &__title{
+  /*&__title{
     justify-items: center;
     font-family: $PrimarySemi;
     font-size: 2em;
@@ -16,7 +16,7 @@ $start-active: #E4BD30;
     @include desde(l){
       font-size: 1.4em;
     }
-  }
+  } */
   &__content{
     display: flex;
     flex-wrap: nowrap;
