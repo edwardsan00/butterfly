@@ -3,7 +3,7 @@
 }
 
 .banner-related{
-  height: 400px;
+  height: 420px;
   background-color: gold;
   position: relative;
   @include banner-outstanding(center, top, center);
@@ -40,9 +40,28 @@
   }
 }
 .slider-related{
-  height: 400px;
-  background-color: tomato;
+  height: 420px;
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
   overflow: hidden;
+  margin-top: 1em;
+  @include desde(m){
+    padding: 0 1em;
+    margin-top: 0;
+  }
+  &__item{
+    margin: 0 auto;
+    padding: 1em 0;
+    .slider-products{
+      &__content-img{
+        @include desde-hasta(481px, 640px){
+          width: 200px;
+        }
+        @include desde-hasta(890px, 1200px){
+          width: 200px;
+        }
+      }
+    }
+  }
 }

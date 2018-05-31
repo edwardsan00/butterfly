@@ -128,10 +128,9 @@ $start-active: #E4BD30;
   }
   &__btn{
     margin-top: 1em;
-    width: 70%;
     text-transform: uppercase;
-    font-family: $PrimaryBold;
     font-size: .8em;
+    letter-spacing: 1.3px;
     @include desde(m){
       width: 145px;
     }

@@ -10903,10 +10903,9 @@ body {
 
 .slider-products__btn {
   margin-top: 1em;
-  width: 70%;
   text-transform: uppercase;
-  font-family: "NovaBold";
-  font-size: .8em; }
+  font-size: .8em;
+  letter-spacing: 1.3px; }
   @media screen and (min-width: 990px) {
     .slider-products__btn {
       width: 145px; } }
@@ -11063,7 +11062,7 @@ body {
         font-size: 1.9em; } }
 
 .banner-related {
-  height: 400px;
+  height: 420px;
   background-color: gold;
   position: relative;
   display: -webkit-box;
@@ -11116,14 +11115,30 @@ body {
     font-size: .9rem; }
 
 .slider-related {
-  height: 400px;
-  background-color: tomato;
+  height: 420px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  overflow: hidden; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin-top: 1em; }
+  @media screen and (min-width: 990px) {
+    .slider-related {
+      padding: 0 1em;
+      margin-top: 0; } }
+  .slider-related__item {
+    margin: 0 auto;
+    padding: 1em 0; }
+    @media screen and (min-width: 481px) and (max-width: 640px) {
+      .slider-related__item .slider-products__content-img {
+        width: 200px; } }
+    @media screen and (min-width: 890px) and (max-width: 1200px) {
+      .slider-related__item .slider-products__content-img {
+        width: 200px; } }
 
 .step__content {
   display: -webkit-box;

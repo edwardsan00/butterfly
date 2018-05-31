@@ -28,7 +28,7 @@
             @content;
         }
     } @else  {
-        @media screen and (min-width: $medida) and (max-width: $medida){
+        @media screen and (min-width: $desde) and (max-width: $hasta){
             @content;
         }
     }
