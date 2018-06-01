@@ -1,0 +1,89 @@
+.comment{
+  padding: 50px 0px;
+  border-top: solid 1px lighten($color: $secondary, $amount: 30%);
+  &__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    align-items: center;
+    &__rate{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &__stars{
+        color: $yellow;
+      }
+      &__number{
+        margin-left: 10px;
+        border: solid 1px lighten($color: $secondary, $amount: 30%);
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-family: $PrimaryRegular;
+        font-size: 1em;
+        color: $secondary;
+      }
+    }
+    &__date{
+      font-size: 1em;
+      font-family: $PrimaryRegular;
+      color: $secondary;
+    }
+  }
+  &__body{
+    &__title{
+      padding-bottom: 30px;
+      font-family: $PrimarySemi;
+      font-size: 1.1em;
+      color: $primary;
+    }
+    &__content{
+      text-align: left;
+      font-family: $PrimaryRegular;
+      font-size: 1em;
+      color: $secondary;
+      @include desde(1024px){
+        font-size: 1.2em;
+        max-width: 780px;
+      }
+    }
+  }
+  &__footer{
+    margin-top: 30px;
+    &__author{
+      padding-bottom: 30px;
+      strong{
+        font-family: $PrimarySemi;
+        color: $primary;
+      }
+      p{
+        font-family: $PrimaryRegular;
+        color: $secondary;
+      }
+    }
+    &__social{
+      font-family: $PrimarySemi;
+      &__like{
+        display: flex;
+        flex-direction: row;
+        color: $primary;
+        &__action{
+          display: flex;
+          flex-direction: row;
+          margin-left: 20px;
+          &__down, &__up{
+            span{
+              color: $secondary;
+            }
+          }
+          &__down{
+            margin-left: 10px;
+          }
+          span{
+            padding: 0px 5px;
+          }
+        }
+      }
+    }
+  }
+}

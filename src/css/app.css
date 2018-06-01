@@ -11249,6 +11249,133 @@ body {
           -ms-flex-pack: center;
               justify-content: center; } }
 
+/****** Style Star Rating Widget *****/
+.rating {
+  border: none;
+  margin: 0;
+  padding: 0; }
+  .rating > input[type="radio"] {
+    display: none; }
+  .rating > label:before {
+    margin: 5px;
+    font-size: 1em;
+    font-family: 'Font Awesome\ 5 Free';
+    display: inline-block;
+    content: "\f005";
+    font-weight: bold; }
+  .rating > .half:before {
+    content: "\f089";
+    position: absolute;
+    font-weight: bold; }
+  .rating > label {
+    color: #f6e9b8;
+    float: right; }
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #e5be30; }
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #e5be30; }
+
+.comment {
+  padding: 50px 0px;
+  border-top: solid 1px #dddddd; }
+  .comment__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .comment__header__rate {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .comment__header__rate__stars {
+        color: #e5be30; }
+      .comment__header__rate__number {
+        margin-left: 10px;
+        border: solid 1px #dddddd;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-family: "NovaRegular";
+        font-size: 1em;
+        color: #909090; }
+    .comment__header__date {
+      font-size: 1em;
+      font-family: "NovaRegular";
+      color: #909090; }
+  .comment__body__title {
+    padding-bottom: 30px;
+    font-family: "NovaSemi";
+    font-size: 1.1em;
+    color: #494949; }
+  .comment__body__content {
+    text-align: left;
+    font-family: "NovaRegular";
+    font-size: 1em;
+    color: #909090; }
+    @media screen and (min-width: 1024px) {
+      .comment__body__content {
+        font-size: 1.2em;
+        max-width: 780px; } }
+  .comment__footer {
+    margin-top: 30px; }
+    .comment__footer__author {
+      padding-bottom: 30px; }
+      .comment__footer__author strong {
+        font-family: "NovaSemi";
+        color: #494949; }
+      .comment__footer__author p {
+        font-family: "NovaRegular";
+        color: #909090; }
+    .comment__footer__social {
+      font-family: "NovaSemi"; }
+      .comment__footer__social__like {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        color: #494949; }
+        .comment__footer__social__like__action {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          margin-left: 20px; }
+          .comment__footer__social__like__action__down span, .comment__footer__social__like__action__up span {
+            color: #909090; }
+          .comment__footer__social__like__action__down {
+            margin-left: 10px; }
+          .comment__footer__social__like__action span {
+            padding: 0px 5px; }
+
 .exclusive-brands {
   display: -webkit-box;
   display: -ms-flexbox;
